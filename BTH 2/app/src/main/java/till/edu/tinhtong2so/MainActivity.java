@@ -1,24 +1,34 @@
-package till.edu.tinhtong2so;
+package till.edu.tinhtong2so; 
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+    }
+
+    public void xuLyTinhTong(View view) {
+        // 1. Ánh xạ các ô nhập liệu
+        EditText oNhapA = findViewById(R.id.edtA);
+        EditText oNhapB = findViewById(R.id.edtB);
+
+        EditText oKetQua = findViewById(R.id.editTextText2);
+
+        String chuoiA = oNhapA.getText().toString();
+        String chuoiB = oNhapB.getText().toString();
+
+        int soA = Integer.parseInt(chuoiA);
+        int soB = Integer.parseInt(chuoiB);
+
+        int tong = soA + soB;
+
+        oKetQua.setText(String.valueOf(tong));
     }
 }
