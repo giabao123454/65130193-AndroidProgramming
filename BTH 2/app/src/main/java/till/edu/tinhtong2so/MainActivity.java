@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void xuLyTinhTong(View view) {
-        // 1. Ánh xạ các ô nhập liệu
+
         EditText oNhapA = findViewById(R.id.edtA);
         EditText oNhapB = findViewById(R.id.edtB);
 
@@ -31,4 +31,4 @@ public class MainActivity extends AppCompatActivity {
 
         oKetQua.setText(String.valueOf(tong));
     }
-}
+}// Da hoan thien chuc nang tinh tong 2 so
