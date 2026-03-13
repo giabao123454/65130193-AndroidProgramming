@@ -1,4 +1,4 @@
-package till.edu.tinhtong2so; 
+package till.edu.tinhtong2so;
 
 import android.os.Bundle;
 import android.view.View;
