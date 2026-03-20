@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:gravity="center_horizontal">
+
+    <EditText
+        android:id="@+id/edtSoA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số A"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/edtSoB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số B"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/btnTinhTong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TÍNH TỔNG"
+        android:textSize="20sp"
+        android:backgroundTint="#673AB7"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:id="@+id/tvKetQua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kết Quả:"
+        android:textSize="24sp"
+        android:textColor="#E91E63"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+</LinearLayout>
