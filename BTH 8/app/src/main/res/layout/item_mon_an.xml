@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_marginBottom="5dp">
+
+    <ImageView
+        android:id="@+id/imgDaiDien"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvTenMon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên món ăn"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#D84315"/>
+
+        <TextView
+            android:id="@+id/tvDonGia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá: 0 VNĐ"
+            android:textSize="16sp"
+            android:textColor="#E65100"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tvMoTa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mô tả chi tiết món ăn"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+</LinearLayout>
