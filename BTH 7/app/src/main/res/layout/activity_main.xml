@@ -7,16 +7,16 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DANH SÁCH NGÔN NGỮ LẬP TRÌNH"
+        android:text="DANH SÁCH TỈNH THÀNH"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:background="#4CAF50"
+        android:background="#FF9800"
         android:padding="15dp"
         android:gravity="center"/>
 
     <ListView
-        android:id="@+id/lvNgonNgu"
+        android:id="@+id/lvTinhThanh"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
