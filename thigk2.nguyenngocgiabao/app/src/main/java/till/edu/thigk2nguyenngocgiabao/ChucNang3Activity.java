@@ -1,24 +1,71 @@
 package till.edu.thigk2nguyenngocgiabao;
 
+import android.content.Context;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ChucNang3Activity extends AppCompatActivity {
+
+    class DanhNhan {
+        int hinhAnh;
+        String ten;
+        String queQuan;
+
+        public DanhNhan(int hinhAnh, String ten, String queQuan) {
+            this.hinhAnh = hinhAnh;
+            this.ten = ten;
+            this.queQuan = queQuan;
+        }
+    }
+
+    class DanhNhanAdapter extends ArrayAdapter<DanhNhan> {
+        public DanhNhanAdapter(Context context, List<DanhNhan> objects) {
+            super(context, 0, objects);
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            if (convertView == null) {
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_danhnhan, parent, false);
+            }
+
+            DanhNhan dn = getItem(position);
+            ImageView img = convertView.findViewById(R.id.imgAnh);
+            TextView txtTen = convertView.findViewById(R.id.tvTen);
+            TextView txtQue = convertView.findViewById(R.id.tvQue);
+
+            img.setImageResource(dn.hinhAnh);
+            txtTen.setText(dn.ten);
+            txtQue.setText(dn.queQuan);
+
+            return convertView;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_chuc_nang3);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        ListView lvDanhNhan = findViewById(R.id.lvDanhNhan);
+        List<DanhNhan> danhSach = new ArrayList<>();
+
+        danhSach.add(new DanhNhan(R.mipmap.ic_launcher, "Hồ Chí Minh", "Nghệ An"));
+        danhSach.add(new DanhNhan(R.mipmap.ic_launcher, "Võ Nguyên Giáp", "Quảng Bình"));
+        danhSach.add(new DanhNhan(R.mipmap.ic_launcher, "Trần Hưng Đạo", "Nam Định"));
+        danhSach.add(new DanhNhan(R.mipmap.ic_launcher, "Nguyễn Huệ", "Bình Định"));
+        danhSach.add(new DanhNhan(R.mipmap.ic_launcher, "Hai Bà Trưng", "Hà Nội"));
+
+        DanhNhanAdapter adapter = new DanhNhanAdapter(this, danhSach);
+        lvDanhNhan.setAdapter(adapter);
     }
 }
