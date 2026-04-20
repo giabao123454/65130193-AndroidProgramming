@@ -59,11 +59,11 @@ public class ChucNang3Activity extends AppCompatActivity {
         ListView lvDanhNhan = findViewById(R.id.lvDanhNhan);
         List<DanhNhan> danhSach = new ArrayList<>();
 
-        danhSach.add(new DanhNhan(R.mipmap.ic_launcher, "Hồ Chí Minh", "Nghệ An"));
-        danhSach.add(new DanhNhan(R.mipmap.ic_launcher, "Võ Nguyên Giáp", "Quảng Bình"));
-        danhSach.add(new DanhNhan(R.mipmap.ic_launcher, "Trần Hưng Đạo", "Nam Định"));
-        danhSach.add(new DanhNhan(R.mipmap.ic_launcher, "Nguyễn Huệ", "Bình Định"));
-        danhSach.add(new DanhNhan(R.mipmap.ic_launcher, "Hai Bà Trưng", "Hà Nội"));
+        danhSach.add(new DanhNhan(R.drawable.hcm, "Hồ Chí Minh", "Nghệ An"));
+        danhSach.add(new DanhNhan(R.drawable.giap, "Võ Nguyên Giáp", "Quảng Bình"));
+        danhSach.add(new DanhNhan(R.drawable.hungdao, "Trần Hưng Đạo", "Nam Định"));
+        danhSach.add(new DanhNhan(R.drawable.nguuyenhue, "Nguyễn Huệ", "Bình Định"));
+        danhSach.add(new DanhNhan(R.drawable.haibatrung, "Hai Bà Trưng", "Hà Nội"));
 
         DanhNhanAdapter adapter = new DanhNhanAdapter(this, danhSach);
         lvDanhNhan.setAdapter(adapter);
