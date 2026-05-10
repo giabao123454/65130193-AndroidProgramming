@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "178005979122",
+    "project_id": "bonnus-vieccanlam",
+    "storage_bucket": "bonnus-vieccanlam.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178005979122:android:65def8631fb87c516dc56b",
+        "android_client_info": {
+          "package_name": "till.edu.vieccanlam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbi5DI-ITfM7gjtf8nN8I0G-IvVAYb1Io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
